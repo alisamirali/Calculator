@@ -1,0 +1,35 @@
+table {
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+
+.container {
+  text-align: center;
+  margin: auto;
+}
+
+textarea {
+  width: 214px;
+  height: 110px;
+  font-size: 30px;
+  border: 1px solid black;
+  resize: none;
+}
+
+td input {
+  height: 50px;
+  width: 50px;
+  font-size: 25px;
+  margin: 1px;
+  background: inherit;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.equal {
+  height: 106px;
+}
+
+.zero {
+  width: 106px;
+}

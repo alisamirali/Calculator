@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calculator</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <textarea id="text-area" cols="30" rows="5" readonly></textarea>
+      <table>
+        <tr>
+          <td>
+            <input
+              type="button"
+              class="button"
+              value="C"
+              onclick="deleteAll()"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="button"
+              value="del"
+              onclick="deleteFunc()"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="button"
+              value="/"
+              onclick="calculatorTxt('/')"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="button"
+              value="*"
+              onclick="calculatorTxt('*')"
+            />
+          </td>
+        </tr>
+        <td>
+          <input
+            type="button"
+            class="button"
+            value="7"
+            onclick="calculatorTxt(7)"
+          />
+        </td>
+        <td>
+          <input
+            type="button"
+            class="button"
+            value="8"
+            onclick="calculatorTxt(8)"
+          />
+        </td>
+        <td>
+          <input
+            type="button"
+            class="button"
+            value="9"
+            onclick="calculatorTxt(9)"
+          />
+        </td>
+        <td>
+          <input
+            type="button"
+            class="button"
+            value="-"
+            onclick="calculatorTxt('-')"
+          />
+        </td>
+        <tr></tr>
+        <tr>
+          <td>
+            <input
+              type="button"
+              class="button"
+              value="4"
+              onclick="calculatorTxt(4)"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="button"
+              value="5"
+              onclick="calculatorTxt(5)"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="button"
+              value="6"
+              onclick="calculatorTxt(6)"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="button"
+              value="+"
+              onclick="calculatorTxt('+')"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="button"
+              class="button"
+              value="1"
+              onclick="calculatorTxt(1)"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="button"
+              value="2"
+              onclick="calculatorTxt(2)"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="button"
+              value="3"
+              onclick="calculatorTxt(3)"
+            />
+          </td>
+          <td rowspan="2">
+            <input type="button" class="equal" value="=" onclick="equal()" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input
+              type="button"
+              class="zero"
+              value="0"
+              onclick="calculatorTxt(0)"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="button"
+              value="."
+              onclick="calculatorTxt('.')"
+            />
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      var textArea = document.getElementById("text-area");
+
+      function calculatorTxt(num) {
+        textArea.value += num;
+      }
+
+      function equal() {
+        textArea.value = eval(textArea.value);
+      }
+
+      function deleteFunc() {
+        textArea.value = textArea.value.substring(0, textArea.value.length - 1);
+      }
+
+      function deleteAll() {
+        textArea.value = "";
+      }
+    </script>
+  </body>
+</html>
